@@ -1,0 +1,36 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend-zero",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nodejs react"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "phong",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "7.15.5",
+    "@babel/node": "7.15.4",
+    "app-root-path": "3.0.0",
+    "body-parser": "1.19.0",
+    "dotenv": "16.0.3",
+    "ejs": "3.1.8",
+    "express": "4.18.2",
+    "morgan": "1.10.0",
+    "multer": "1.4.3",
+    "mysql2": "2.3.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "nodemon": "2.0.20"
+  }
+}

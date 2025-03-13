@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="/">Home</a>
+        <a href="/create">Create user</a>
+        <a href="/upload">Upload file</a>
+    </div>
+    <div class="table-container">
+        <!-- <%= JSON.stringify(listUsers) %> -->
+            <div class="title">List Users</div>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Action</th>
+                </tr>
+
+                <% for (let i=0; i < listUsers.length; i++) { %>
+                    <tr>
+                        <td><%= listUsers[i].id %></td>
+                        <td><%=listUsers[i].email %></td>
+                        <td><%=listUsers[i].name %></td>
+                        <td><%=listUsers[i].city %></td>
+                        <td>
+                            <a href="/update/<%= listUsers[i].id %>" class="">Edit</a>
+                            <form action="/delete-user/<%= listUsers[i].id %>" method="post">
+                                <button>Delete</button>
+
+                            </form>
+                        </td>
+                    </tr>
+                    <% } %>
+
+            </table>
+    </div>
+</body>
+
+</html>
